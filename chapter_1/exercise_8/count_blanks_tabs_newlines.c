@@ -7,18 +7,23 @@
 /*
  * Prints the number of blanks, tabs and newlines provided as input.
  */
-int
-main()
+int main()
 {
   int c, nb, nt, nn;
   c = nb = nt = nn = 0;
 
-  while ((c = getchar()) != EOF) {
-    if (c == BLANK) {
+  while ((c = getchar()) != EOF)
+  {
+    if (c == BLANK)
+    {
       nb++;
-    } else if (c == TAB) {
+    }
+    else if (c == TAB)
+    {
       nt++;
-    } else if (c == NEWLINE) {
+    }
+    else if (c == NEWLINE)
+    {
       nn++;
     }
   }
@@ -30,3 +35,4 @@ main()
     nn
   );
 }
+

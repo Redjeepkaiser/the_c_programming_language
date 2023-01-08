@@ -2,27 +2,42 @@
 
 #define MAX_LINE_LEN 80         // Column before which we do our fold.
 
+/*
+ * Reads one line from input into `buffer`.
+ */
 int read_line(char buffer[], int max_line_len);
+
+/*
+ * Returns the index of the last character of whitespace.
+ */
 int get_last_white_space(char buff[], int line_len);
 
-int main() {
+int main()
+{
     char buff[MAX_LINE_LEN];
     int curr_coll = 0;
     int max_line_len = MAX_LINE_LEN;
     int line_len;
 
-    while ((line_len = read_line(buff, max_line_len)) > 0) {
+    while ((line_len = read_line(buff, max_line_len)) > 0)
+    {
         max_line_len = MAX_LINE_LEN - curr_coll;
 
-        if (line_len < max_line_len || buff[max_line_len - 1] == '\n') {
+        if (line_len < max_line_len || buff[max_line_len - 1] == '\n')
+        {
             printf("%s", buff);
-        } else {
+        }
+        else
+        {
             int m = get_last_white_space(buff, line_len);
 
-            if (m == -1) {
+            if (m == -1)
+            {
                 printf("%s\n", buff);
                 curr_coll = 0;
-            } else {
+            }
+            else
+            {
                 for (int i = 0; i < m; i++)
                     putchar(buff[i]);
 
@@ -37,7 +52,8 @@ int main() {
     }
 }
 
-int read_line(char buffer[], int max_line_len) {
+int read_line(char buffer[], int max_line_len)
+{
     int c, i;
 
     for (i = 0; i < max_line_len && (c = getchar()) != EOF && c != '\n'; i++)
@@ -55,7 +71,8 @@ int read_line(char buffer[], int max_line_len) {
 }
 
 
-int get_last_white_space(char buff[], int line_len) {
+int get_last_white_space(char buff[], int line_len)
+{
     int i;
 
     for (i = line_len; i >= 0; i--) {
@@ -65,3 +82,4 @@ int get_last_white_space(char buff[], int line_len) {
 
     return i;
 }
+

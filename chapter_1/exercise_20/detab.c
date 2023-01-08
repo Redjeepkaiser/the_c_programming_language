@@ -20,14 +20,16 @@ int main()
 {
     char current_line[MAX_LINE_LEN];
     
-    while (get_line(current_line)) {
+    while (get_line(current_line))
+    {
         replace_tabs(current_line);
     }
 
     return 0;
 }
 
-int get_line(char buffer[]) {
+int get_line(char buffer[])
+{
     int c, i;
 
     for (i = 0; i < MAX_LINE_LEN && (c = getchar()) != EOF && c != '\n'; i++)
@@ -44,17 +46,23 @@ int get_line(char buffer[]) {
     return i;
 }
 
-void replace_tabs(char s[]) {
+void replace_tabs(char s[])
+{
     int num_spaces_ins = 0;
-    for (int i = 0; i < MAX_LINE_LEN && s[i] != '\0'; i++) {
-        if (s[i] == '\t') {
+    for (int i = 0; i < MAX_LINE_LEN && s[i] != '\0'; i++)
+    {
+        if (s[i] == '\t')
+        {
             int num_spaces = TAB_WIDTH - ((i + num_spaces_ins + TAB_WIDTH) % TAB_WIDTH);
             num_spaces_ins += num_spaces;
 
             for (int j = 0; j < num_spaces; j++)
                 putchar(' ');
-        } else {
+        }
+        else
+        {
             putchar(s[i]);
         }
     }
 }
+

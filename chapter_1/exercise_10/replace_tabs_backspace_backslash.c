@@ -7,20 +7,28 @@
 /*
  * Replaces tabs, backspace and backslash with more explicit notations.
  */
-int
-main()
+int main()
 {
   int c, b;
 
-  while ((c = getchar()) != EOF) {
-    if (c == TAB) {
+  while ((c = getchar()) != EOF)
+  {
+    if (c == TAB)
+    {
       printf("\\t");
-    } else if (c == BACKSPACE) {
+    }
+    else if (c == BACKSPACE)
+    {
       printf("\\b");
-    } else if (c == BACKSLASH) {
+    }
+    else if (c == BACKSLASH)
+    {
       printf("\\\\");
-    } else {
+    }
+    else
+    {
       putchar(c);
     }
   }
 }
+

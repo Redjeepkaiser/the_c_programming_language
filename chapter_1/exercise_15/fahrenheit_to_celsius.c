@@ -15,8 +15,8 @@ int main()
 {
     printf("Fahrenheit\tCelsius\n");
     printf("-----------------------\n");
-    for (float fahrenheit = 0; fahrenheit <= 300; fahrenheit += 20)
-    {
+
+    for (float fahrenheit = 0; fahrenheit <= 300; fahrenheit += 20) {
         printf("%-10.0f\t%-7.1f\n", fahrenheit,
                fahrenheit_to_celsius(fahrenheit));
     }

@@ -43,8 +43,7 @@ char* reverse(char s[])
 
     int last_index = 0;
 
-    for (i = 0; i < MAX_LINE_LEN; i++)
-    {
+    for (i = 0; i < MAX_LINE_LEN; i++) {
         if (s[i] == '\n') {
             last_index = i-1;
             break;
@@ -56,8 +55,7 @@ char* reverse(char s[])
         }
     }
 
-    for (i = 0; last_index >= 0; last_index--, i++)
-    {
+    for (i = 0; last_index >= 0; last_index--, i++) {
         reversed[i] = s[last_index];
     }
 

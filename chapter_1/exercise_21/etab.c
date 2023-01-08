@@ -11,7 +11,8 @@ int main()
     int num_blanks = 0;
     char c;
 
-    while ((c = getchar()) != EOF) {
+    while ((c = getchar()) != EOF)
+    {
         if (c == ' ')
             num_blanks++;
     }
@@ -27,3 +28,4 @@ int main()
 
     return 0;
 }
+

@@ -5,18 +5,22 @@
 /*
  * Prints each word in the input on a new line.
  */
-int
-main()
+int main()
 {
   char c;
 
-  while ((c = getchar()) != EOF) {
-    if (c == BLANK) {
+  while ((c = getchar()) != EOF)
+  {
+    if (c == BLANK)
+    {
       putchar('\n');
-    } else {
+    }
+    else
+    {
       putchar(c);
     }
   }
   
   return 0;
 }
+

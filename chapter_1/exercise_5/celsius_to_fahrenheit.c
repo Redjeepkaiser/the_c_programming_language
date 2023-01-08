@@ -7,8 +7,7 @@
 /*
  * Prints the Celsius-Fahrenheit table for celsius = -40, 30, ..., 40.
  */
-int
-main()
+int main()
 {
   printf("Celsius\tFahrenheit\n");
   printf("-----------------------\n");

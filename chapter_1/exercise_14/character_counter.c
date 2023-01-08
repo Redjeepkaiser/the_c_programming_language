@@ -3,7 +3,7 @@
 #define HIST_SIZE 100
 #define NUM_CHARS 128
 
-/**
+/*
  * Prints a horizontal histogram of the word counts.
  */
 void print_vertical_hist(int *word_count)
@@ -41,6 +41,7 @@ void print_vertical_hist(int *word_count)
                 printf(" ");
             }
         }
+
         printf("\n");
     }
 
@@ -49,6 +50,7 @@ void print_vertical_hist(int *word_count)
         printf("-");
     }
     printf("\n");
+
     for (int j = 0; j <= NUM_CHARS; j++)
     {
         if (32 < j && j < 126) {
@@ -57,6 +59,7 @@ void print_vertical_hist(int *word_count)
             printf(" ");
         }
     }
+
     printf("\n\n");
 }
 

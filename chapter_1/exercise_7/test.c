@@ -3,8 +3,8 @@
 /*
  * Prints the value of EOF.
  */
-int
-main()
+int main()
 {
   printf("%d\n", EOF);
 }
+

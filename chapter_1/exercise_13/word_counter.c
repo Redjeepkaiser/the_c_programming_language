@@ -44,7 +44,8 @@ void print_vertical_hist(int *word_count, int *max_word_len, int *n_words)
         int bar_size = ((float)word_count[i] / (float)num_words) * HIST_SIZE;
         word_count[i] = bar_size;
 
-        if (bar_size > largest_bar_size) {
+        if (bar_size > largest_bar_size)
+        {
             largest_bar_size = bar_size;
         }
     }
@@ -63,6 +64,7 @@ void print_vertical_hist(int *word_count, int *max_word_len, int *n_words)
                 printf("   ");
             }
         }
+
         printf("\n");
     }
 
@@ -71,6 +73,7 @@ void print_vertical_hist(int *word_count, int *max_word_len, int *n_words)
         printf("---");
     }
     printf("\n");
+    
     for (int j = 1; j <= largest_word_len; j++)
     {
         printf("%2.d ", j);
