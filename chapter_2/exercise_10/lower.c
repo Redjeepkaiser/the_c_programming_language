@@ -18,7 +18,6 @@ int main()
 void lower(char s[])
 {
     for(int i = 0; s[i] != '\0'; i++) {
-        printf("%d\n", i);
         s[i] = (65 <= s[i] && s[i] <= 90) ? s[i] + 32 : s[i];
     }
 }
