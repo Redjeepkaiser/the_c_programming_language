@@ -19,7 +19,7 @@ void reverse(char s[]);
 int main() {
     char s[BUF_SIZE];
 
-    iota(INT_MIN, s, 16);
+    itob(-134134134, s, 16);
 
     printf("result: %s\n", s);
 
@@ -31,9 +31,10 @@ void itob(int n, char s[], int base) {
     sign = n;
     i = 0;
 
-    do {    /* generate digits in reverse order */
-        s[i++] = abs(n % 10) + '0'; /* get next digit */
-    } while (n /= 10);
+    do {
+        int val = abs(n % base);
+        s[i++] = val < 10 ? val + '0' : (val - 10) + 'A';
+    } while (n /= base);
 
     if (sign < 0)
         s[i++] = '-';
